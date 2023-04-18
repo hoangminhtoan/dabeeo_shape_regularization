@@ -6,7 +6,7 @@ import random
 from skimage import io
 from skimage.segmentation import mark_boundaries
 from skimage.transform import rotate
-import configs as var
+import configs as config
 
 TEST = False 
 
@@ -141,7 +141,6 @@ class DataLoader():
             
             if np.count_nonzero(win_seg):
             	void = False
-
         # Perform some data augmentation
         rot = random.randint(0,3)
         win_rgb = np.rot90(win_rgb, k=rot)
@@ -168,9 +167,9 @@ class DataLoader():
         self.gti_imgs = []
         self.seg_imgs = []
 
-        rgb_files = glob(var.DATASET_RGB)
-        gti_files = glob(var.DATASET_GTI)
-        seg_files = glob(var.DATASET_SEG)
+        rgb_files = glob(config.DATASET_RGB)
+        gti_files = glob(config.DATASET_GTI)
+        seg_files = glob(config.DATASET_SEG)
 
         rgb_files.sort()
         gti_files.sort()

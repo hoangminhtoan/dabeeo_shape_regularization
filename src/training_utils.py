@@ -15,7 +15,7 @@ from torch.autograd import Variable
 import torch
 import numpy as np
 
-import gdal
+from osgeo import gdal
 
 import configs as var
 

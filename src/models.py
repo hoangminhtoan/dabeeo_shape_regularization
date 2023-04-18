@@ -13,8 +13,6 @@ def weights_init_normal(m):
         torch.nn.init.normal_(m.weight.data, 1.0, 0.02)
         torch.nn.init.constant_(m.bias.data, 0.0)
 
-
-
 class ResidualBlock(nn.Module):
     def __init__(self, in_features):
         super(ResidualBlock, self).__init__()
@@ -32,7 +30,6 @@ class ResidualBlock(nn.Module):
 
     def forward(self, x):
         return x + self.block(x)
-
 
 
 class GeneratorResNet(nn.Module):
