@@ -219,7 +219,7 @@ def train(args):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='')
 	parser.add_argument('--exp', default='exp0', type=str, help='experimental name')
-	parser.add_argument('--models_path', default='../checkpoints/230418_ckpts/')
+	parser.add_argument('--models_path', default='../checkpoints/230421_ckpts/')
 	parser.add_argument('--restore', default=False, action='store_true')
 	parser.add_argument('--batch_size', default=4, type=int)
 	parser.add_argument('--start_batch', default=0, type=int)
